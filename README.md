@@ -1,4 +1,4 @@
-TimeString
+time_string
 ==========
 
 時間を文字列にして返す
