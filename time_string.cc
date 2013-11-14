@@ -6,8 +6,14 @@
 #include "time_string.h"
 
 const std::string TimeString::day_of_week[] = {
-  "月", "火", "水", "木", "金", "土", "日"
+  "日", "月", "火", "水", "木", "金", "土"
 };
+
+std::string TimeString::nowDayOfWeek() {
+  std::time_t timer = std::time(0);
+  std::tm *now_time = localtime(&timer);
+  return TimeString::day_of_week[now_time->tm_wday];
+}
 
 std::string TimeString::nowTimeString (const int timetype,
                                        const int joint,

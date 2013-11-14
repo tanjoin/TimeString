@@ -11,5 +11,6 @@
 int main(int argc, const char * argv[])
 {
   std::cout << TimeString::nowTimeString() << std::endl;
+  std::cout << "(" << TimeString::nowDayOfWeek() << ")" << std::endl;
   return EXIT_SUCCESS;
 }

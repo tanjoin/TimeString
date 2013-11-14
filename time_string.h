@@ -46,13 +46,16 @@ public:
   static const int day_of_week_count = 7;
   static const std::string day_of_week[];
 
+  /// <summary> 今日の曜日をstd::string型で返す </summary>
+  static std::string nowDayOfWeek();
+
   /// <summary> 現在時間をstd::string型で返す </summary>
-  static std::string nowTimeString (const int timetype = TIME_DEFAULT,
+  static std::string nowTimeString(const int timetype = TIME_DEFAULT,
                                     const int joint = JOINT_DEFAULT,
                                     const bool twodigits = true);
   
   /// <summary> joint_type から間に挟む記号を返す </summary>
-  static std::string decideJoint (const int joint_type);
+  static std::string decideJoint(const int joint_type);
 };
 
 #endif // _TIME_STRING_H_
